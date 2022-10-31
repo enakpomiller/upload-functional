@@ -1,0 +1,58 @@
+<style>
+    .image {
+        background: url('/img/test.jpg');
+        padding: 250px 20px;
+        background: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .txt-bg {
+        background: url('/img/test.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+
+
+
+<div class="image" style="height:500px">
+  
+    <div class="container" style="position:relative;bottom:160px;">
+          <!-- breadcrumb -->
+            <nav aria-label="breadcrumb" style="position:relative;bottom:50px;">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/home">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"> <a href="/home">Signup</a> </li>
+                </ol>
+            </nav>
+
+        <!-- end breadcrumb -->  
+ 
+   
+            <form class="d-flex" method="POST" action="/">       
+         <input class="form-control" required type="search" name="search"  style="background:url('/image/test.jpg');color:white; width:40%;margin:auto;" placeholder="Search" aria-label="Search">            
+   </form> 
+
+              {{#if rows}}
+            <table class="table table-bordered" style="width:70%;margin:auto;">
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>  Content </th>
+                    <th>Description</th> 
+                </tr>
+                 {{#each rows}}
+                <tr>
+                    <td>{{this.name}}</td>
+                </tr>
+            </table>
+            {{/each}}
+
+            {{/if}}
+
+      
+
+</div>

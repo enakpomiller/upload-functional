@@ -1,0 +1,84 @@
+<style>
+    .image {
+        background: url('/img/test.jpg');
+        padding: 250px 20px;
+        background: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .txt-bg {
+        background: url('/img/test.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .profile_pic{
+        border-radius:400px;
+        width:8%;
+        position: absolute;
+        bottom: 90px;
+    }
+</style>
+
+<div class="image" style="height:800px">
+    <div class="container" style="position:relative;bottom:190px;">
+           
+             <!-- breadcrumb -->
+                    {{!-- <nav aria-label="breadcrumb" style="position:relative;bottom:50px;">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/home">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"> <a href="/home">Signup</a> </li>
+                        </ol>
+                    </nav> --}}
+
+        <!-- end breadcrumb -->  
+             <div class="row">
+                {{#each rows}}
+                  {{#if this.userfile}}
+                    <img src="{{this.userfile}}" class="profile_pic">
+                     {{this.fname}} 
+                  {{/if}}
+                {{/each}} 
+               </div>
+            <form class="d-flex" method="POST" action="/">  
+             
+         <input class="form-control" type="search" required type="search"  name="search" value=""  style="background:url('/image/test.jpg');color:white; width:40%;margin:auto;" placeholder="Search" aria-label="Search">
+               
+   </form> 
+
+     
+
+              {{#if rows}}
+
+            <table class="table table-bordered text-justify" style="width:70%;margin:auto;margin-top:30px;color:white;">
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th> 
+                         Content 
+                         </th>
+                    <th>
+                        Description
+                        </th>
+                </tr>
+                 {{#each rows}}
+                <tr>
+                    <td>{{this.name}}</td>
+                    <td>{{this.content}}</td>
+                    <td>{{this.description}}</td>
+                    </tr>
+                {{/each}}
+            </table>
+
+            {{else}} 
+
+           <center style="margin:50px;color:white"> Please Enter Correct Key Word </center>
+
+        
+            {{/if}}
+      
+
+            
+
+</div>

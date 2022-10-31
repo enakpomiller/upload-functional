@@ -1,0 +1,54 @@
+<style>
+    .image {
+        background: url('/img/test.jpg');
+        padding: 250px 20px;
+        background: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .txt-bg {
+        background: url('/img/test.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+
+
+<div class="image">
+      
+    <div class="container" style="position:relative;bottom:150px;">
+          <!-- breadcrumb -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/home">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"> <a href="/home">Signup</a> </li>
+                </ol>
+            </nav>
+
+        <!-- end breadcrumb -->
+        <div class="form-group" style="margin: 20px;width:40%;">
+            <label>
+
+        <h1 style="color: white;"> Login</h1>
+            </label> 
+            {{#if error}}
+                <div class="alert alert-danger alert-dismissible fade show" role="alert" >
+                {{error}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {{/if}}
+            <input type="text"  name="email" value="" placeholder="Enter First Name" class="form-control"
+                style="background:url('/image/test.jpg');color:white;">
+            </div>
+        <div class="form-group" style="margin: 20px;width:40%;">
+            <input type="text" name="password" value="" placeholder="Enter Password" class="form-control"
+                style="background:url('/image/test.jpg');color:white;">
+        </div>
+        <div class="form-group" style="margin: 20px;">
+            <button class="btn btn-primary"> Login  </button> 
+        </div>
+    </div> 
+ 
+</div>

@@ -1,0 +1,59 @@
+<style>
+    .image {
+        background: url('/img/test.jpg');
+        padding: 250px 20px;
+        background: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .txt-bg {
+        background: url('/img/test.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+
+
+<div class="image">
+
+    <div class="container" style="position: relative;bottom:220px;">
+        <!-- breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/home">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page"> <a href="/home">Signup</a> </li>
+            </ol>
+        </nav>
+        <!-- end breadcrumb -->
+
+        <center>
+            <div class="form-group" style="margin: 20px;width:40%;">
+                <label>
+                    <h2 style="color: white;"> Ailment </h2>
+                </label>
+                <div class="form-group" style="margin: 20px;width:90%;">
+                    {{#if ailment_sent}}
+                    <div class="alert alert-success"> {{ailment_sent}}</div>
+                    {{/if}}
+                    <input type="text" name="name" required  autocomplete="off" placeholder=" Ailment Name " class="form-control"
+                        style="background:url('/image/test.jpg');color:white;">
+                </div>
+
+                <div class="form-group" style="margin: 20px;width:90%;">
+                    <input type="text" name="content" required autocomplete="off" placeholder=" Chemical Properties"
+                        class="form-control" style="background:url('/image/test.jpg');color:white;">
+                </div>
+
+                <div class="form-group" style="margin: 20px;width:90%;">
+                    <input type="text" name="description" required autocomplete="off" placeholder=" Chemical Properties"
+                        class="form-control" style="background:url('/image/test.jpg');color:white;">
+                </div>
+
+                <div class="form-group" style="">
+                    <button class="btn btn-primary" style="width:90%;"> Upload </button>
+                </div>
+            </div>
+        </center>
+    </div>

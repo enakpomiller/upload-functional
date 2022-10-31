@@ -1,0 +1,99 @@
+<style>
+    .image {
+        background: url('/img/test.jpg');
+        padding: 150px 20px;
+        background: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .txt-bg {
+        background: url('/img/test.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+
+<div class="image">
+    <div class="container" style="position:relative;bottom:100px;">
+        <!-- breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/signupform">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page"> Sign Up </li>
+                <li class="breadcrumb-item"><a href="/login"> Login </a></li>
+            </ol>
+        </nav>
+        <!-- end breadcrumb -->
+        <div class="form-group" style="margin: 20px;width:40%;">
+            <label>
+                <h1 style="color: #ffffff;"> Signup</h1>
+            </label>
+              
+                {{#each rows}}
+                  {{#if this.userfile}}
+                     
+                    <img src="{{this.userfile}}">
+   
+                  {{/if}}
+                {{/each}}    
+     
+            {{#if wrong_email}}
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{wrong_email}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {{/if}}
+
+            {{#if wrong_email}}
+            <script>
+                { { !--swal.fire('warning', '{{wrong_email}}', 'warning'); --} }
+            </script>
+            {{/if}}
+
+
+            <input type="text" name="fname" placeholder="Enter First Name" class="form-control"
+                style="background:url('/image/test.jpg');color:white;">
+        </div>
+        <div class="form-group" style="margin: 20px;width:40%;">
+            <input type="text" name="other_names" placeholder=" Other Names" class="form-control"
+                style="background:url('/image/test.jpg');color:white">
+        </div>
+        <div class="form-group" style="margin: 20px;width:40%;">
+            <input type="text" name="address" placeholder=" Address" class="form-control"
+                style="background:url('/image/test.jpg');color:white;">
+        </div>
+        <div class="form-group" style="margin: 20px;width:40%;">
+            <input type="text" name="phone" placeholder=" Phone Number" class="form-control"
+                style="background:url('/image/test.jpg');color:white;">
+        </div>
+        <div class="form-group" style="margin: 20px;width:40%;">
+            <select name="gender" class="form-control" style="background:url('/image/test.jpg');color:white;">
+                <option> SELECT </option>
+                <option value="male"> MALE </option>
+                <option value="female"> FEMALE </option>
+            </select>
+        </div>
+        
+        <div class="form-group" style="margin: 20px;width:40%;">
+            <input type="file" name="userfile" accept="image/*" class="form-control"
+                style="background:url('/image/test.jpg');color:white;"/>
+        </div>
+
+        <div class="form-group" style="margin: 20px;width:40%;">
+            <input type="email" name="email" placeholder="Enter Email" class="form-control"
+                style="background:url('/image/test.jpg');color:white;">
+        </div>
+        <div class="form-group" style="margin: 20px;width:40%;">
+            <input type="text" name="password" placeholder="Enter Password" class="form-control"
+                style="background:url('/image/test.jpg');color:white;">
+        </div>
+        <div class="form-group" style="margin: 20px;">
+            <button class="btn btn-primary"> submit </button>
+        </div>
+    </div>
+
+
+</div> 
+
